@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body>
+      <h1>NOMI</h1>
+      <img src="Cube.png" style="height:400px; width:400px;">
+      <script>
+      // Require annyang
+      const annyang = require('annyang');
+      // Turn on debug messages
+      annyang.debug();
+      // Define sample command
+      var commands = {
+        'hello': function() {
+          console.log('world');
+        }
+      };
+      // Add our commands to annyang
+      annyang.addCommands(commands);
+      // Start listening. You can call this here, or attach this call to an event, button, etc.
+      annyang.start();
+      </script>
+  </body>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+</html>
